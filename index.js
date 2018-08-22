@@ -45,8 +45,10 @@ restService.post("/echo", function(req, res) {
     
   
   return res.json({
+    payload: {
     displayText: departCity,
     source: arrivalCity
+    }
   });
 });
 
