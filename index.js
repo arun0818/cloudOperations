@@ -42,10 +42,13 @@ restService.post("/echo", function(req, res) {
     req.body.queryResult.parameters.endDate
       ? req.body.queryResult.parameters.endDate
       : "Test Data";
+  
+  var x = "test";
     
   
   return res.json({
     payload: {
+    fulfillmentText: x,
     departingCity: departCity,
     arrivalCity: arrivalCity,
     startDate: startDate,
