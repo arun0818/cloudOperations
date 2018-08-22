@@ -15,18 +15,18 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
  
-  var depart-city =
+  var departCity =
     req.body.queryResult &&
     req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.depart-city
-      ? req.body.queryResult.parameters.depart-city
+    req.body.queryResult.parameters.departCity
+      ? req.body.queryResult.parameters.departCity
       : "Test Data";
   
-  var arrival-city =
+  var arrivalCity =
     req.body.queryResult &&
     req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.arrival-city
-      ? req.body.queryResult.parameters.arrival-city
+    req.body.queryResult.parameters.arrivalCity
+      ? req.body.queryResult.parameters.arrivalCity
       : "Test Data";
   
     var startDate =
@@ -45,8 +45,8 @@ restService.post("/echo", function(req, res) {
     
   
   return res.json({
-    displayText: depart-city,
-    source: arrival-city
+    displayText: departCity,
+    source: arrivalCity
   });
 });
 
