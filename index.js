@@ -47,9 +47,9 @@ restService.post("/echo", function(req, res) {
     
   
   return res.json({
-    fulfillmentText: x,
-    text: x
-    /*departingCity: departCity,
+    fulfillmentText: x
+    /*text: x
+    departingCity: departCity,
     arrivalCity: arrivalCity,
     startDate: startDate,
     endDate: endDate*/
