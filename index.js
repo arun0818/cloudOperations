@@ -49,6 +49,7 @@ restService.post("/echo", function(req, res) {
   return res.json({
     payload: {
     fulfillmentText: x,
+    displayText : x,
     departingCity: departCity,
     arrivalCity: arrivalCity,
     startDate: startDate,
