@@ -46,8 +46,10 @@ restService.post("/echo", function(req, res) {
   
   return res.json({
     payload: {
-    displayText: departCity,
-    source: arrivalCity
+    departingCity: departCity,
+    arrivalCity: arrivalCity,
+    startDate: startDate,
+    endDate: endDate
     }
   });
 });
