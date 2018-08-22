@@ -14,15 +14,39 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var bot =
+ 
+  var depart-city =
     req.body.queryResult &&
     req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.city
-      ? req.body.queryResult.parameters.city
-      : "Seems like some problem. Speak again.";
+    req.body.queryResult.parameters.depart-city
+      ? req.body.queryResult.parameters.depart-city
+      : "Test Data";
+  
+  var arrival-city =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.arrival-city
+      ? req.body.queryResult.parameters.arrival-city
+      : "Test Data";
+  
+    var startDate =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.startDate
+      ? req.body.queryResult.parameters.startDate
+      : "Test Data";
+  
+    var endDate =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.endDate
+      ? req.body.queryResult.parameters.endDate
+      : "Test Data";
+    
+  
   return res.json({
-    displayText: bot,
-    source: "webhook-echo-sample"
+    displayText: depart-city,
+    source: arrival-city
   });
 });
 
