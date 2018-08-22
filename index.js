@@ -15,10 +15,10 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
   var bot =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.city
-      ? req.body.result.parameters.city
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.city
+      ? req.body.queryResult.parameters.city
       : "Seems like some problem. Speak again.";
   return res.json({
     displayText: bot,
