@@ -48,12 +48,17 @@ var stops = fs.flightDetails.stops;
 var luggage = fs.flightDetails.luggage;
 var text = dCity+aCity+name+stops+luggage;
 
-  var chatResponse = text;
-  //var x = "";
-  /*if (action == 'book_tickets')
+var chatResponse = text;
+  
+  if (action == 'book_tickets')
   {
-    x = "Action was successful.";
-  } */
+    if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity)
+    {
+    chatResponse = fs.flightDetails.name;
+    }
+  } 
+  
+  
   
   return res.json({
     fulfillmentText: chatResponse
