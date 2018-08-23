@@ -34,8 +34,8 @@ jsonFile.readFile(fileName, function(err, jsonData) {
 //var fs = require('./airline.json');
 //var json = JSON.parse(fs.readFileSync('/path/to/file.json', 'utf8'));
 
-//var fs = require('./airline.json');
-//var chatResponse = fs.name;
+var fs = require('./airline.json');
+var chatResponse = fs.name;
   
   
   var departCity =
