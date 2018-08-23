@@ -15,7 +15,7 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
  
-var action = req.body.queryResult.action;
+//var action = req.body.queryResult.action;
   var chatResponse = "";
 /******************
 var chatResponse = "";
