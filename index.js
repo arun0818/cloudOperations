@@ -15,6 +15,10 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
  
+  
+  var action = request.body.queryResult.action;
+      
+  
   var departCity =
     req.body.queryResult &&
     req.body.queryResult.parameters &&
@@ -43,7 +47,9 @@ restService.post("/echo", function(req, res) {
       ? req.body.queryResult.parameters.endDate
       : "Test Data";
   
-  var x = "test";
+  var x = "";
+  if (action == 'book_tickets')
+    x = "Action was successful";
     
   
   return res.json({
