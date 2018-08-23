@@ -1,3 +1,9 @@
 {
-"name": "QUANTAS"
+  "flight1": {
+        "departingCity"  : "Sydney",
+        "arrivalCity"  : "Melbourne",
+        "name": "QJK201",
+        "stops": "3",
+        "luggage": "15kg"   
+    }
 }
