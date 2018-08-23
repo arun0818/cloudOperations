@@ -1,5 +1,4 @@
-{
-  "flightDetails": [{
+ [{
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Perth",
         "name": "QJK201",
@@ -39,4 +38,4 @@
         "runningHours": "30",
         "luggage": "5kg"   
     }]
-}
+
