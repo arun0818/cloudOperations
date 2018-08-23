@@ -15,20 +15,20 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
  
-//var action = req.body.queryResult.action;
-//var chatResponse = "";
+var action = req.body.queryResult.action;
+var chatResponse = "";
       
-//var jsonFile = require('jsonfile')
-//var fileName = 'airline.json'
+var jsonFile = require('jsonfile')
+var fileName = 'airline.json'
 
-//jsonFile.readFile(fileName, function(err, jsonData) {
-  //if (err) throw err;
-  //for (var i = 0; i < jsonData.length; ++i) {
+jsonFile.readFile(fileName, function(err, jsonData) {
+  if (err) throw err;
+  for (var i = 0; i < jsonData.length; ++i) {
 
-    //chatResponse = jsonData[i].name;
-    //console.log("Emp Name: "+jsonData[i].place);
-    //}
-//});
+  chatResponse = jsonData[i].name;
+  console.log("Emp Name: "+jsonData[i].place);
+  }
+});
  
   
   
