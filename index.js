@@ -21,7 +21,7 @@ restService.post("/echo", function(req, res) {
   data = JSON.parse(data); // you missed that...
   for(var i = 0; i < data.length; i++) {
     //var newPerson = new Person();
-    chatResponse = data[i].firstname;
+    chatResponse = data[i].departingCity;
         
   }
 });
