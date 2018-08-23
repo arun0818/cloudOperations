@@ -4,6 +4,7 @@
         "arrivalCity"  : "Melbourne",
         "name": "QJK201",
         "stops": "3",
+        "runningHours": "10", 
         "luggage": "15kg"   
     },
   "flightDetails": {
@@ -11,6 +12,7 @@
         "arrivalCity"  : "Melbourne",
         "name": "K201",
         "stops": "2",
+        "runningHours": "12",
         "luggage": "10kg"   
     },
 "flightDetails": {
@@ -18,6 +20,7 @@
         "arrivalCity"  : "Melbourne",
         "name": "R201",
         "stops": "1",
+        "runningHours": "18",
         "luggage": "15kg"   
     },
 "flightDetails": {
@@ -25,6 +28,7 @@
         "arrivalCity"  : "Melbourne",
         "name": "PK123",
         "stops": "3",
+        "runningHours": "20",
         "luggage": "5kg"   
     },
 "flightDetails": {
@@ -32,6 +36,7 @@
         "arrivalCity"  : "Melbourne",
         "name": "MN113",
         "stops": "1",
+        "runningHours": "30",
         "luggage": "5kg"   
     }
 }
