@@ -21,14 +21,14 @@ restService.post("/echo", function(req, res) {
 //var jsonFile = require('jsonfile')
 //var fileName = 'airline.json'
 
-jsonFile.readFile(fileName, function(err, jsonData) {
-  if (err) throw err;
-  for (var i = 0; i < jsonData.length; ++i) {
+//jsonFile.readFile(fileName, function(err, jsonData) {
+  //if (err) throw err;
+  //for (var i = 0; i < jsonData.length; ++i) {
 
-    chatResponse = jsonData[i].name;
+    //chatResponse = jsonData[i].name;
     //console.log("Emp Name: "+jsonData[i].place);
-    }
-});
+    //}
+//});
  
   
   
