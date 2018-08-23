@@ -7,7 +7,7 @@
         "runningHours": "10", 
         "luggage": "15kg"   
     },
-  "flightDetails": {
+   {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Perth",
         "name": "K201",
@@ -15,7 +15,7 @@
         "runningHours": "12",
         "luggage": "10kg"   
     },
-"flightDetails": {
+{
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Perth",
         "name": "R201",
@@ -23,7 +23,7 @@
         "runningHours": "18",
         "luggage": "15kg"   
     },
-"flightDetails": {
+ {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Melbourne",
         "name": "PK123",
@@ -31,7 +31,7 @@
         "runningHours": "20",
         "luggage": "5kg"   
     },
-"flightDetails": {
+ {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Melbourne",
         "name": "MN113",
