@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-var chatResponse = "";
+var chatResponse = "Below is a list of details I could fetch sorted (least to most) based on their Carboon Footprint. \n\r\t";
 var counter = 0;  
 var airlineDetails = require('./airline.json');
 airlineDetails.forEach(function (airlineDetail) {
@@ -28,29 +28,7 @@ airlineDetails.forEach(function (airlineDetail) {
 });
   
   
-//var fs = require('./airline.json');
-  //var chatResponse = "default value";
-  //for(var i in fs.flightDetails)
-  //{
-    //chatResponse = flightDetails[i].departingCity;
-  //}
-   
-  
-  //var action = req.body.queryResult.action;
-  
-  //if (action == 'book_tickets')
-  //{
-    //if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity && fs.flightDetails.stops == 'One')
-    //{
-    //chatResponse = 'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
-    //}
-    //if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity /*&& fs.flightDetails.stops == 'Two'*/)
-    //{
-    //chatResponse = chatResponse+' Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
-    //} 
-  
-  //} 
-  
+ 
    
   return res.json({
     fulfillmentText: chatResponse
