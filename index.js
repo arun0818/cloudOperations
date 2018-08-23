@@ -16,7 +16,7 @@ restService.use(bodyParser.json());
 restService.post("/echo", function(req, res) {
  
   
-  var action = request.body.queryResult.action;
+  var action = req.body.queryResult.action;
       
   
   var departCity =
