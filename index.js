@@ -34,44 +34,13 @@ jsonFile.readFile(fileName, function(err, jsonData) {
 //var fs = require('./airline.json');
 //var json = JSON.parse(fs.readFileSync('/path/to/file.json', 'utf8'));
   
-
-var fs = require('./airline.json');
-var dCity = fs.flightDetails.departingCity;
-var aCity = fs.flightDetails.arrivalCity;
-var name = fs.flightDetails.name;
-var stops = fs.flightDetails.stops;
-var luggage = fs.flightDetails.luggage;
-  chatResponse = dCity+aCity+name+stops+luggage;
+  var reqDepartCity = req.body.queryResult.parameters.departCity;
+  var reqArrivalCity = req.body.queryResult.parameters.arrivalCity;
+  var reqStartDate = req.body.queryResult.parameters.startDate;
+  var reqEndDate = req.body.queryResult.parameters.endDate;
+      
   
-  var departCity =
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.departCity
-      ? req.body.queryResult.parameters.departCity
-      : "Test Data";
-  
-  var arrivalCity =
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.arrivalCity
-      ? req.body.queryResult.parameters.arrivalCity
-      : "Test Data";
-  
-    var startDate =
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.startDate
-      ? req.body.queryResult.parameters.startDate
-      : "Test Data";
-  
-    var endDate =
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.endDate
-      ? req.body.queryResult.parameters.endDate
-      : "Test Data";
-  
-  chatResponse= chatResponse+myData();
+  chatResponse= myData();
   //var x = "";
   /*if (action == 'book_tickets')
   {
@@ -79,20 +48,19 @@ var luggage = fs.flightDetails.luggage;
   } */
   
   return res.json({
-    //fulfillmentText: chatResponse
     fulfillmentText: chatResponse
-    /*text: x
-    departingCity: departCity,
-    arrivalCity: arrivalCity,
-    startDate: startDate,
-    endDate: endDate*/
-   
-  });
+});
 });
 
 function myData() { 
-   return "hello";
-  } 
+var fs = require('./airline.json');
+var dCity = fs.flightDetails.departingCity;
+var aCity = fs.flightDetails.arrivalCity;
+var name = fs.flightDetails.name;
+var stops = fs.flightDetails.stops;
+var luggage = fs.flightDetails.luggage;
+chatResponse = dCity+aCity+name+stops+luggage;
+ } 
 
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
