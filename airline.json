@@ -1,7 +1,7 @@
 {
   "flightDetails": {
         "departingCity"  : "Sydney",
-        "arrivalCity"  : "Melbourne",
+        "arrivalCity"  : "Perth",
         "name": "QJK201",
         "stops": "3",
         "runningHours": "10", 
@@ -9,7 +9,7 @@
     },
   "flightDetails": {
         "departingCity"  : "Sydney",
-        "arrivalCity"  : "Melbourne",
+        "arrivalCity"  : "Perth",
         "name": "K201",
         "stops": "2",
         "runningHours": "12",
@@ -17,7 +17,7 @@
     },
 "flightDetails": {
         "departingCity"  : "Sydney",
-        "arrivalCity"  : "Melbourne",
+        "arrivalCity"  : "Perth",
         "name": "R201",
         "stops": "1",
         "runningHours": "18",
