@@ -15,9 +15,23 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
  
-  
-  var action = req.body.queryResult.action;
+var action = req.body.queryResult.action;
+var chatResponse = "";
       
+var jsonFile = require('jsonfile')
+var fileName = 'airline.json'
+
+jsonFile.readFile(fileName, function(err, jsonData) {
+  if (err) throw err;
+  for (var i = 0; i < jsonData.length; ++i) {
+
+    chatResponse = jsonData[i].name;
+    //console.log("Emp Name: "+jsonData[i].place);
+    }
+});
+ 
+  
+  
   
   var departCity =
     req.body.queryResult &&
@@ -47,14 +61,14 @@ restService.post("/echo", function(req, res) {
       ? req.body.queryResult.parameters.endDate
       : "Test Data";
   
-  var x = "";
-  if (action == 'book_tickets')
+  //var x = "";
+  /*if (action == 'book_tickets')
   {
     x = "Action was successful.";
-  } 
+  } */
   
   return res.json({
-    fulfillmentText: x
+    fulfillmentText: chatResponse
     /*text: x
     departingCity: departCity,
     arrivalCity: arrivalCity,
