@@ -13,7 +13,7 @@
         "name": "K201",
         "stops": 2,
         "runningHours": 12,
-        "fuelEfficiency": 0.85
+        "fuelEfficiency": 0.85,
         "luggage": 10   
     },
 {
