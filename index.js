@@ -19,6 +19,7 @@ restService.post("/echo", function(req, res) {
   var fs = require('fs');
   fs.readFile('./airline.json', 'utf8', function (err,data) {
   data = JSON.parse(data); // you missed that...
+    chatResponse = data.length;
   for(var i = 0; i < data.length; i++) {
     //var newPerson = new Person();
     chatResponse = data[i].departingCity;
