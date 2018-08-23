@@ -14,13 +14,15 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-var chatResponse = "default value";
+var chatResponse = "";
+var counter = 0;  
 var airlineDetails = require('./airline.json');
 airlineDetails.forEach(function (airlineDetail) {
   //chatResponse = airlineDetail.departingCity;
   if(req.body.queryResult.parameters.departCity == airlineDetail.departingCity && req.body.queryResult.parameters.arrivalCity == airlineDetail.arrivalCity)
   {
-  chatResponse = chatResponse + 'Option : ' +airlineDetail.name+ ' which takes '+airlineDetail.runningHours+' hours and has '+airlineDetail.stops+' stops.';
+  counter = counter+1;  
+  chatResponse = chatResponse + 'Option :' +counter+' '+airlineDetail.name+ ' which takes '+airlineDetail.runningHours+' hours and has '+airlineDetail.stops+' stops.';
   }
   
 });
