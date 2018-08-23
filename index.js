@@ -22,11 +22,32 @@ airlineDetails.forEach(function (airlineDetail) {
   if(req.body.queryResult.parameters.departCity == airlineDetail.departingCity && req.body.queryResult.parameters.arrivalCity == airlineDetail.arrivalCity)
   {
   counter = counter+1;  
-  chatResponse = chatResponse + "\n\r\t" +"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops.\n\r\t";
+  var cp = calculateCarbonFootPrint(airlineDetail.stops,airlineDetail.luggage,airlineDetail.runningHours,airlineDetail.fuelEfficiency);
+  chatResponse = chatResponse + "\n\r\t" +"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
   }
   
 });
   
+  function calculateCarbonFootPrint(stops,luggage,runningHours,fuelEfficiency)
+  {
+    var cp = "high" ;
+   if (stops < 2  luggage < 15 && runningHours < 12 && fuelEfficiency > 0.85 )
+   {
+     cp = "low";
+   }
+   
+   if (stops < 3  luggage < 15 && runningHours < 15 && fuelEfficiency > 0.75 && fuelEfficiency < 0.85 )
+   {
+     cp = "average";
+   } 
+    
+    
+   if (stops > 3 || luggage > 15 || runningHours > 15 || fuelEfficiency < 0.75 )
+   {
+     cp = "very high";
+   } 
+   return cp;
+  }
   
  
    
