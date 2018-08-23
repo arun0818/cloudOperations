@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-var chatResponse = "Below is a list of details I could fetch sorted (least to most) based on their Carboon Footprint. \n\r\t";
+var chatResponse = "Below is a list of details I could fetch... \n\r\t";
 var counter = 0;  
 var airlineDetails = require('./airline.json');
 airlineDetails.forEach(function (airlineDetail) {
@@ -31,7 +31,7 @@ airlineDetails.forEach(function (airlineDetail) {
   function calculateCarbonFootPrint(stops,luggage,runningHours,fuelEfficiency)
   {
     var cp = "high" ;
-   if (stops < 2  luggage < 15 && runningHours < 12 && fuelEfficiency > 0.85 )
+   /*if (stops < 2  luggage < 15 && runningHours < 12 && fuelEfficiency > 0.85 )
    {
      cp = "low";
    }
@@ -45,7 +45,7 @@ airlineDetails.forEach(function (airlineDetail) {
    if (stops > 3 || luggage > 15 || runningHours > 15 || fuelEfficiency < 0.75 )
    {
      cp = "very high";
-   } 
+   } */
    return cp;
   }
   
