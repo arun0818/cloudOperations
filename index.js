@@ -16,7 +16,7 @@ restService.use(bodyParser.json());
 restService.post("/echo", function(req, res) {
  
 //var action = req.body.queryResult.action;
-  var chatResponse = "";
+ 
 /******************
 var chatResponse = "";
 var jsonFile = require('jsonfile')
@@ -39,8 +39,8 @@ jsonFile.readFile(fileName, function(err, jsonData) {
   var reqStartDate = req.body.queryResult.parameters.startDate;
   var reqEndDate = req.body.queryResult.parameters.endDate;
       
-  
-  chatResponse= myData();
+  var fs = require('./airline.json');  
+  var chatResponse= myData(fs);
   //var x = "";
   /*if (action == 'book_tickets')
   {
@@ -52,8 +52,7 @@ jsonFile.readFile(fileName, function(err, jsonData) {
 });
 });
 
-function myData() { 
-var fs = require('./airline.json');
+function myData(fs) { 
 var dCity = fs.flightDetails.departingCity;
 var aCity = fs.flightDetails.arrivalCity;
 var name = fs.flightDetails.name;
