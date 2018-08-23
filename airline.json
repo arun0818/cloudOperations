@@ -2,40 +2,45 @@
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Perth",
         "name": "QJK201",
-        "stops": "One",
-        "runningHours": "10", 
-        "luggage": "15kg"   
+        "stops": 1,
+        "runningHours": 10,
+        "fuelEfficiency": 0.85,
+        "luggage": 15   
     },
    {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Perth",
         "name": "K201",
-        "stops": "Two",
-        "runningHours": "12",
-        "luggage": "10kg"   
+        "stops": 2,
+        "runningHours": 12,
+        "fuelEfficiency": 0.85
+        "luggage": 10   
     },
 {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Perth",
         "name": "R201",
-        "stops": "Three",
-        "runningHours": "18",
-        "luggage": "15kg"   
+        "stops": 3,
+        "runningHours": 18,
+        "fuelEfficiency": 0.85,
+        "luggage": 15   
     },
  {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Melbourne",
         "name": "PK123",
-        "stops": "Four",
-        "runningHours": "20",
-        "luggage": "5kg"   
+        "stops": 4,
+        "runningHours": 20,
+        "fuelEfficiency": 0.95, 
+        "luggage": 5   
     },
  {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Melbourne",
         "name": "MN113",
-        "stops": "One",
-        "runningHours": "30",
-        "luggage": "5kg"   
+        "stops": 1,
+        "runningHours": 30,
+        "fuelEfficiency": 0.65,
+        "luggage": 5   
     }]
 
