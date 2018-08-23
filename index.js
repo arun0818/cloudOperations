@@ -48,7 +48,7 @@ var stops = fs.flightDetails.stops;
 var luggage = fs.flightDetails.luggage;
 var text = dCity+aCity+name+stops+luggage;
 
-  var chatResponse= text;
+  var chatResponse = text;
   //var x = "";
   /*if (action == 'book_tickets')
   {
