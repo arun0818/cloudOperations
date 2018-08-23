@@ -26,7 +26,7 @@ jsonFile.readFile(fileName, function(err, jsonData) {
   for (var i = 0; i < jsonData.length; ++i) {
 
   chatResponse = jsonData[i].name;
-  console.log("Emp Name: "+jsonData[i].place);
+  //console.log("Emp Name: "+jsonData[i].place);
   }
 });
  
