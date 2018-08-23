@@ -14,25 +14,19 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
- var chatResponse = "default value";
+var chatResponse = "default value";
 
- var objects = require('./airline.json');
+var airlineDetails = require('./airline.json');
 
-objects.forEach(function (obj) {
-  chatResponse = obj.departingCity;
+airlineDetails.forEach(function (airlineDetail) {
+  //chatResponse = airlineDetail.departingCity;
+  if(req.body.queryResult.parameters.departCity == airlineDetail.departingCity && req.body.queryResult.parameters.arrivalCity == airlineDetail.arrivalCity && airlineDetail.flightDetails.stops == 'One')
+  {
+  chatResponse = 'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
+  }
+  
 });
   
-  
-  
-  //var fs = require('fs');
-  //fs.readFile('./airline.json', 'utf8', function (err,data) {
-  //data = JSON.parse(data); 
-    //for(var i = 0; i < data.length; i++) {
-    //var newPerson = new Person();
-    //chatResponse = data[i].departingCity;
-        
-  //}
-//});
   
 //var fs = require('./airline.json');
   //var chatResponse = "default value";
