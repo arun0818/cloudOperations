@@ -6,7 +6,7 @@
         "stops": "3",
         "luggage": "15kg"   
     }
-  "flightDetails": {
+  "flightDetails1": {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Melbourne",
         "name": "K201",
