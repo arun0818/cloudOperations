@@ -33,10 +33,22 @@ jsonFile.readFile(fileName, function(err, jsonData) {
 *//////
 //var fs = require('./airline.json');
 //var json = JSON.parse(fs.readFileSync('/path/to/file.json', 'utf8'));
+  
+    "flight1": {
+        "departingCity"  : "Sydney",
+        "arrivalCity"  : "Melbourne",
+        "name": "QJK201",
+        "stops": "3",
+        "luggage": "15kg"   
+    }
 
 var fs = require('./airline.json');
-var chatResponse = fs.name;
-  
+var dCity = fs.departingCity;
+var aCity = fs.arrivalCity;
+var name = fs.name;
+var stops = fs.stops;
+var luggage = fs.luggage;
+  chatResponse = dCity+aCity+name+stops+luggage;
   
   var departCity =
     req.body.queryResult &&
