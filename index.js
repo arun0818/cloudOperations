@@ -53,8 +53,6 @@ var action = req.body.queryResult.action;
   
   if (action == 'book_tickets')
   {
-    for (var i = 0; i < fs.length; ++i)
-    {
     if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity && fs.flightDetails.runningHours<11)
     {
     chatResponse = 'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
@@ -63,7 +61,7 @@ var action = req.body.queryResult.action;
     {
     chatResponse = chatResponse+'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
     }  
-  }
+  
   } 
   
    
