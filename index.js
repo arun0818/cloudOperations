@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-var chatResponse = "Below is a list of details I could fetch.Spare some time and book wisely , I have used my intelligence and calucalted the carboon footprints for each fo the options.";
+var chatResponse = "Below is a list of details I could fetch.Spare some time and book wisely , I have used my intelligence and calucalted the carboon footprints for each of the options.";
 var counter = 0;  
 var airlineDetails = require('./airline.json');
 airlineDetails.forEach(function (airlineDetail) {
@@ -40,8 +40,7 @@ airlineDetails.forEach(function (airlineDetail) {
      cp = "very high";
    }
     
-  chatResponse = chatResponse + "\n\r\t" +"
-                                          "+"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
+  chatResponse = chatResponse + "\n\r\t"+"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
   }
   
 });
