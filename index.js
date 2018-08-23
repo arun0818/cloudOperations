@@ -71,7 +71,7 @@ var luggage = fs.flightDetails.luggage;
       ? req.body.queryResult.parameters.endDate
       : "Test Data";
   
-  myData();
+  chatResponse= chatResponse+myData();
   //var x = "";
   /*if (action == 'book_tickets')
   {
@@ -91,8 +91,8 @@ var luggage = fs.flightDetails.luggage;
 });
 
 function myData() { 
-   chatResponse=chatResponse+"hello";
-} 
+   return "hello";
+  } 
 
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
