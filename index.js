@@ -39,8 +39,16 @@ jsonFile.readFile(fileName, function(err, jsonData) {
   var reqStartDate = req.body.queryResult.parameters.startDate;
   var reqEndDate = req.body.queryResult.parameters.endDate;
       
-  var fs = require('./airline.json');  
-  var chatResponse= myData(fs);
+var fs = require('./airline.json');
+  
+var dCity = fs.flightDetails.departingCity;
+var aCity = fs.flightDetails.arrivalCity;
+var name = fs.flightDetails.name;
+var stops = fs.flightDetails.stops;
+var luggage = fs.flightDetails.luggage;
+var text = dCity+aCity+name+stops+luggage;
+
+  var chatResponse= text;
   //var x = "";
   /*if (action == 'book_tickets')
   {
@@ -52,15 +60,6 @@ jsonFile.readFile(fileName, function(err, jsonData) {
 });
 });
 
-function myData(fs) { 
-var dCity = fs.flightDetails.departingCity;
-var aCity = fs.flightDetails.arrivalCity;
-var name = fs.flightDetails.name;
-var stops = fs.flightDetails.stops;
-var luggage = fs.flightDetails.luggage;
-var text = dCity+aCity+name+stops+luggage;
-  return text;
- } 
 
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
