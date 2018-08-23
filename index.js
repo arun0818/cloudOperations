@@ -55,7 +55,7 @@ var action = req.body.queryResult.action;
   {
     if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity)
     {
-    chatResponse = fs.flightDetails.name;
+    chatResponse = 'Option 1 : ' +fs.flightDetails.name+ 'which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
     }
   } 
   
