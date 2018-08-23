@@ -53,14 +53,20 @@ var action = req.body.queryResult.action;
   
   if (action == 'book_tickets')
   {
-    if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity)
+    for (var i = 0; i < fs.length; ++i)
     {
-    chatResponse = 'Option 1 : ' +fs.flightDetails.name+ 'which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
+    if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity && fs.flightDetails.runningHours<40)
+    {
+    chatResponse = 'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
     }
+    if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity && fs.flightDetails.runningHours<40)
+    {
+    chatResponse = chatResponse+'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
+    }  
+  }
   } 
   
-  
-  
+   
   return res.json({
     fulfillmentText: chatResponse
 });
