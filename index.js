@@ -59,7 +59,8 @@ var aCity = fs.flightDetails.arrivalCity;
 var name = fs.flightDetails.name;
 var stops = fs.flightDetails.stops;
 var luggage = fs.flightDetails.luggage;
-chatResponse = dCity+aCity+name+stops+luggage;
+var text = dCity+aCity+name+stops+luggage;
+  return text;
  } 
 
 restService.listen(process.env.PORT || 8000, function() {
