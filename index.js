@@ -49,8 +49,9 @@ restService.post("/echo", function(req, res) {
   
   var x = "";
   if (action == 'book_tickets')
+  {
     x = "Action was successful.";
-    
+  } 
   
   return res.json({
     fulfillmentText: x
