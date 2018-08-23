@@ -14,16 +14,24 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
- 
-    
-var fs = require('./airline.json');
-  
-var chatResponse = "default value";
+ var chatResponse = "default value";
 
-  for(var i in fs.flightDetails)
-  {
-    chatResponse = flightDetails[i].departingCity;
+  fs.readFile('./airline.json', 'utf8', function (err,data) {
+  data = JSON.parse(data); // you missed that...
+  for(var i = 0; i < data.length; i++) {
+    //var newPerson = new Person();
+    chatResponse = data[i].firstname;
+        
   }
+});
+  
+//var fs = require('./airline.json');
+  //var chatResponse = "default value";
+  //for(var i in fs.flightDetails)
+  //{
+    //chatResponse = flightDetails[i].departingCity;
+  //}
+   
   
   //var action = req.body.queryResult.action;
   
