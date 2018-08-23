@@ -4,17 +4,17 @@
         "name": "QJK201",
         "stops": 1,
         "runningHours": 10,
-        "fuelEfficiency": 0.85,
-        "luggage": 15   
+        "fuelEfficiency": 0.95,
+        "luggage": 10   
     },
    {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Perth",
         "name": "K201",
         "stops": 2,
-        "runningHours": 12,
+        "runningHours": 14,
         "fuelEfficiency": 0.85,
-        "luggage": 10   
+        "luggage": 12   
     },
 {
         "departingCity"  : "Sydney",
@@ -22,7 +22,7 @@
         "name": "R201",
         "stops": 3,
         "runningHours": 18,
-        "fuelEfficiency": 0.85,
+        "fuelEfficiency": 0.65,
         "luggage": 15   
     },
  {
