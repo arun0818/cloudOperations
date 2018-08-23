@@ -40,7 +40,7 @@ airlineDetails.forEach(function (airlineDetail) {
      cp = "very high";
    }
     
-  chatResponse = chatResponse + "\n\r\t"+"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
+  chatResponse = chatResponse + "\n\r\t"+"                                                                                                           "+"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
   }
   
 });
