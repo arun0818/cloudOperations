@@ -1,9 +1,37 @@
 {
-  "flight1": {
+  "flightDetails": {
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Melbourne",
         "name": "QJK201",
         "stops": "3",
         "luggage": "15kg"   
+    }
+  "flightDetails": {
+        "departingCity"  : "Sydney",
+        "arrivalCity"  : "Melbourne",
+        "name": "K201",
+        "stops": "2",
+        "luggage": "10kg"   
+    }
+"flightDetails": {
+        "departingCity"  : "Sydney",
+        "arrivalCity"  : "Melbourne",
+        "name": "R201",
+        "stops": "1",
+        "luggage": "15kg"   
+    }
+"flightDetails": {
+        "departingCity"  : "Sydney",
+        "arrivalCity"  : "Melbourne",
+        "name": "PK123",
+        "stops": "3",
+        "luggage": "5kg"   
+    }
+"flightDetails": {
+        "departingCity"  : "Sydney",
+        "arrivalCity"  : "Melbourne",
+        "name": "MN113",
+        "stops": "1",
+        "luggage": "5kg"   
     }
 }
