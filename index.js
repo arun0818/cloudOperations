@@ -30,15 +30,15 @@ airlineDetails.forEach(function (airlineDetail) {
      cp = "low";
    }
    
-   //if (airlineDetail.stops < 3  && airlineDetail.luggage < 15 && airlineDetail.runningHours < 15 && airlineDetail.fuelEfficiency > 0.75 && airlineDetail.fuelEfficiency < 0.85 )
-   //{
-   //  cp = "average";
-   //} 
+   if (airlineDetail.stops < 3  && airlineDetail.luggage < 15 && airlineDetail.runningHours < 15 && airlineDetail.fuelEfficiency > 0.75 && airlineDetail.fuelEfficiency < 0.85 )
+   {
+     cp = "average";
+   } 
        
-   //if (airlineDetail.stops > 3 || airlineDetail.luggage > 15 || airlineDetail.runningHours > 15 || airlineDetail.fuelEfficiency < 0.75 )
-   //{
-   //  cp = "very high";
-   //}
+   if (airlineDetail.stops > 3 || airlineDetail.luggage > 15 || airlineDetail.runningHours > 15 || airlineDetail.fuelEfficiency < 0.75 )
+   {
+     cp = "very high";
+   }
     
   chatResponse = chatResponse + "\n\r\t" +"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
   }
