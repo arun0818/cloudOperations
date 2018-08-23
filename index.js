@@ -22,7 +22,7 @@ airlineDetails.forEach(function (airlineDetail) {
   //chatResponse = airlineDetail.departingCity;
   if(req.body.queryResult.parameters.departCity == airlineDetail.departingCity && req.body.queryResult.parameters.arrivalCity == airlineDetail.arrivalCity && airlineDetail.flightDetails.stops == 'One')
   {
-  chatResponse = 'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
+  chatResponse = 'Option : ' +airlineDetail.name+ ' which takes '+airlineDetail.runningHours+' hours and has '+airlineDetail.stops+' stops.';
   }
   
 });
