@@ -4,7 +4,7 @@
         "arrivalCity"  : "Perth",
         "name": "QJK201",
         "stops": "3",
-        "runningHours": "10", 
+        "runningHours": 10, 
         "luggage": "15kg"   
     },
   "flightDetails": {
