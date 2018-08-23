@@ -71,6 +71,7 @@ var luggage = fs.flightDetails.luggage;
       ? req.body.queryResult.parameters.endDate
       : "Test Data";
   
+  myData();
   //var x = "";
   /*if (action == 'book_tickets')
   {
