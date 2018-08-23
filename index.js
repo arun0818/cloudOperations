@@ -18,28 +18,27 @@ restService.post("/echo", function(req, res) {
     
 var fs = require('./airline.json');
   
-var dCity = fs.flightDetails.departingCity;
-var aCity = fs.flightDetails.arrivalCity;
-var name = fs.flightDetails.name;
-var stops = fs.flightDetails.stops;
-var luggage = fs.flightDetails.luggage;
-//var text = dCity+aCity+name+stops+luggage;
-
 var chatResponse = "default value";
-var action = req.body.queryResult.action;
-  
-  if (action == 'book_tickets')
+
+  for(var i in fs.flightDetails)
   {
-    if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity && fs.flightDetails.stops == 'One')
-    {
-    chatResponse = 'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
-    }
+    chatResponse = flightDetails[i].departingCity;
+  }
+  
+  //var action = req.body.queryResult.action;
+  
+  //if (action == 'book_tickets')
+  //{
+    //if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity && fs.flightDetails.stops == 'One')
+    //{
+    //chatResponse = 'Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
+    //}
     //if(req.body.queryResult.parameters.departCity == fs.flightDetails.departingCity && req.body.queryResult.parameters.arrivalCity == fs.flightDetails.arrivalCity /*&& fs.flightDetails.stops == 'Two'*/)
     //{
     //chatResponse = chatResponse+' Option : ' +fs.flightDetails.name+ ' which takes '+fs.flightDetails.runningHours+' hours and has '+fs.flightDetails.stops+' stops.';
     //} 
   
-  } 
+  //} 
   
    
   return res.json({
