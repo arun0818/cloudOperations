@@ -27,7 +27,7 @@
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Melbourne",
         "name": "PK123",
-        "stops": "3",
+        "stops": "Four",
         "runningHours": "20",
         "luggage": "5kg"   
     },
@@ -35,7 +35,7 @@
         "departingCity"  : "Sydney",
         "arrivalCity"  : "Melbourne",
         "name": "MN113",
-        "stops": "1",
+        "stops": "One",
         "runningHours": "30",
         "luggage": "5kg"   
     }
