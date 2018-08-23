@@ -18,7 +18,7 @@ var chatResponse = "default value";
 var airlineDetails = require('./airline.json');
 airlineDetails.forEach(function (airlineDetail) {
   //chatResponse = airlineDetail.departingCity;
-  if(req.body.queryResult.parameters.departCity == airlineDetail.departingCity && req.body.queryResult.parameters.arrivalCity == airlineDetail.arrivalCity && airlineDetail.stops == 'One')
+  if(req.body.queryResult.parameters.departCity == airlineDetail.departingCity && req.body.queryResult.parameters.arrivalCity == airlineDetail.arrivalCity)
   {
   chatResponse = 'Option : ' +airlineDetail.name+ ' which takes '+airlineDetail.runningHours+' hours and has '+airlineDetail.stops+' stops.';
   }
