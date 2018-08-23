@@ -34,10 +34,10 @@ jsonFile.readFile(fileName, function(err, jsonData) {
 //var fs = require('./airline.json');
 //var json = JSON.parse(fs.readFileSync('/path/to/file.json', 'utf8'));
   
-  var reqDepartCity = req.body.queryResult.parameters.departCity;
-  var reqArrivalCity = req.body.queryResult.parameters.arrivalCity;
-  var reqStartDate = req.body.queryResult.parameters.startDate;
-  var reqEndDate = req.body.queryResult.parameters.endDate;
+  //var reqDepartCity = req.body.queryResult.parameters.departCity;
+  //var reqArrivalCity = req.body.queryResult.parameters.arrivalCity;
+  //var reqStartDate = req.body.queryResult.parameters.startDate;
+  //var reqEndDate = req.body.queryResult.parameters.endDate;
       
 var fs = require('./airline.json');
   
