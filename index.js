@@ -15,30 +15,7 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
  
-//var action = req.body.queryResult.action;
- 
-/******************
-var chatResponse = "";
-var jsonFile = require('jsonfile')
-var fileName = 'airline.json'
-
-jsonFile.readFile(fileName, function(err, jsonData) {
-  if (err) throw err;
-  for (var i = 0; i < jsonData.length; ++i) {
-
-  chatResponse = jsonData[i].name;
-  //console.log("Emp Name: "+jsonData[i].place);
-  }
-});
-*//////
-//var fs = require('./airline.json');
-//var json = JSON.parse(fs.readFileSync('/path/to/file.json', 'utf8'));
-  
-  //var reqDepartCity = req.body.queryResult.parameters.departCity;
-  //var reqArrivalCity = req.body.queryResult.parameters.arrivalCity;
-  //var reqStartDate = req.body.queryResult.parameters.startDate;
-  //var reqEndDate = req.body.queryResult.parameters.endDate;
-      
+    
 var fs = require('./airline.json');
   
 var dCity = fs.flightDetails.departingCity;
