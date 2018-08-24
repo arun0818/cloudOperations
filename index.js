@@ -41,7 +41,7 @@ if (action == 'book_confirmation')
    {
      cp = "very high";
    }
-   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. When I get the approval, you will be booked on "+airlineDetail.name+" with a "+cp+" carbon footprint."+" Think again, choosing a Business class will always burn twice the amount of carbon dioxide and other toxics compared to flying economy.";   
+   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. Once I get the approval, you will be booked on "+airlineDetail.name+" with a "+cp+" carbon footprint."+" Think again, choosing a Business class will always burn twice the amount of carbon dioxide and other toxics compared to flying economy.";   
    }
    });
 }
@@ -69,7 +69,7 @@ airlineDetails.forEach(function (airlineDetail) {
      cp = "very high";
    }
     
-  chatResponse = chatResponse + "\n\r\t"+"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
+  chatResponse = chatResponse + "\n\r\t"+"Option " +counter+": Flight Name: "+airlineDetail.name+"- Running Hours: "+airlineDetail.runningHours+"- Stops: "+airlineDetail.stops+"- Carbon Footprint: "+cp+"." ;
   }
   
 });
