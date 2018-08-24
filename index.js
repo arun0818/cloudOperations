@@ -41,7 +41,7 @@ if (action == 'book_confirmation')
    {
      cp = "very high";
    }
-   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. You will be booked on "+airlineDetail.name+" with a carbon footprint of "+cp;   
+   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. You will be booked on "+airlineDetail.name+" with a "+cp+" carbon footprint.";   
    }
    });
 }
