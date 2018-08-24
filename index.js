@@ -41,7 +41,7 @@ if (action == 'book_confirmation')
    {
      cp = "very high";
    }
-   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. When I get the approval, you will be booked on "+airlineDetail.name+" with a "+cp+" carbon footprint."+" Choosing a Business class will always burn twice the amount of carbon dioxide and other toxics compared to flying economy.";   
+   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. When I get the approval, you will be booked on "+airlineDetail.name+" with a "+cp+" carbon footprint."+" Think again, choosing a Business class will always burn twice the amount of carbon dioxide and other toxics compared to flying economy.";   
    }
    });
 }
