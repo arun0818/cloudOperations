@@ -5,7 +5,8 @@
         "stops": 1,
         "runningHours": 10,
         "fuelEfficiency": 0.95,
-        "luggage": 10   
+        "luggage": 10,
+        "class": "eco"
     },
    {
         "departingCity"  : "Sydney",
@@ -14,7 +15,8 @@
         "stops": 2,
         "runningHours": 14,
         "fuelEfficiency": 0.85,
-        "luggage": 12   
+        "luggage": 12,
+        "class": "eco"
     },
 {
         "departingCity"  : "Sydney",
@@ -23,7 +25,8 @@
         "stops": 3,
         "runningHours": 18,
         "fuelEfficiency": 0.65,
-        "luggage": 15   
+        "luggage": 15,
+        "class": "eco"
     },
  {
         "departingCity"  : "Sydney",
@@ -32,7 +35,8 @@
         "stops": 4,
         "runningHours": 20,
         "fuelEfficiency": 0.95, 
-        "luggage": 5   
+        "luggage": 5,
+        "class": "business"
     },
  {
         "departingCity"  : "Sydney",
@@ -41,6 +45,7 @@
         "stops": 1,
         "runningHours": 30,
         "fuelEfficiency": 0.65,
-        "luggage": 5   
+        "luggage": 5,
+        "class": "eco"
     }]
 
