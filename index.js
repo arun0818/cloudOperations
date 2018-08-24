@@ -42,15 +42,7 @@ if (action == 'book_confirmation')
      cp = "very high";
    }
    chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. Once I get the approval, you will be booked on "+airlineDetail.name+" with a "+cp+" carbon footprint."+" Think again, choosing a Business class will always burn twice the amount of carbon dioxide and other toxics compared to flying economy.";   
-   var sendgrid = require("sendgrid")("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");
-   var email = new sendgrid.Email();
-
-    email.addTo("arun4mmit@gmail.com");
-    email.setFrom("test@test.com");
-    email.setSubject("Sending with SendGrid is Fun");
-    email.setHtml("and easy to do anywhere, even with Node.js");
-
-    sendgrid.send(email);  
+   
    }
    });
 }
