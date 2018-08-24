@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-var chatResponse = "Below is a list of details I could fetch.Spare some time and book wisely , I have used my intelligence and calculated the carboon footprints for each of the options.";
+var chatResponse = "I have used my intelligence and calculated the carboon footprints for each of the options below.";
 var counter = 0;  
 var airlineDetails = require('./airline.json');
 
