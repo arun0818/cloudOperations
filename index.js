@@ -69,7 +69,7 @@ airlineDetails.forEach(function (airlineDetail) {
      cp = "very high";
    }
     
-  chatResponse = chatResponse + "\n\r\t"+"**** Option " +counter+" : Flight Name : "+airlineDetail.name+"- Running Hours : "+airlineDetail.runningHours+"- Stops : "+airlineDetail.stops+"- Carbon Footprint : "+cp+". ****" ;
+  chatResponse = chatResponse + "\n\r\t"+"**** Option " +counter+" : Flight Name : "+airlineDetail.name+"- Running Hours : "+airlineDetail.runningHours+"- Stops : "+airlineDetail.stops+"- Carbon Footprint : "+cp+"." ;
   }
   
 });
