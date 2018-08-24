@@ -23,15 +23,15 @@ var action = req.body.queryResult.action;
 if (action == 'book_confirmation')
 {
   
-   var sendgrid = require("sendgrid")("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");
-   var email = new sendgrid.Email();
+   //var sendgrid = require("sendgrid")("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");
+   //var email = new sendgrid.Email();
 
-    email.addTo("arun4mmit@gmail.com");
-    email.setFrom("test@test.com");
-    email.setSubject("Sending with SendGrid is Fun");
-    email.setHtml("and easy to do anywhere, even with Node.js");
+    //email.addTo("arun4mmit@gmail.com");
+    //email.setFrom("test@test.com");
+    //email.setSubject("Sending with SendGrid is Fun");
+    //email.setHtml("and easy to do anywhere, even with Node.js");
 
-    sendgrid.send(email);  
+    //sendgrid.send(email);  
   
   
   
