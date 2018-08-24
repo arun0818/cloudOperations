@@ -17,6 +17,35 @@ restService.post("/echo", function(req, res) {
 var chatResponse = "Below is a list of details I could fetch.Spare some time and book wisely , I have used my intelligence and calucalted the carboon footprints for each of the options.";
 var counter = 0;  
 var airlineDetails = require('./airline.json');
+
+var action = req.body.queryResult.action;
+  
+if (action == 'book_confirmation')
+{
+  var cp = "unclassified";
+  var chatResponse = "";
+  airlineDetails.forEach(function (airlineDetail) {
+   if(req.body.queryResult.parameters.flight == airlineDetail.name)
+   {
+      if (airlineDetail.stops < 2  && airlineDetail.luggage < 15 && airlineDetail.runningHours < 12 && airlineDetail.fuelEfficiency > 0.85 )
+   {
+     cp = "low";
+   }
+   
+   if (airlineDetail.stops < 3  && airlineDetail.luggage < 15 && airlineDetail.runningHours < 15 && airlineDetail.fuelEfficiency > 0.75 && airlineDetail.fuelEfficiency < 0.85 )
+   {
+     cp = "average";
+   } 
+       
+   if (airlineDetail.stops > 3 || airlineDetail.luggage > 15 || airlineDetail.runningHours > 15 || airlineDetail.fuelEfficiency < 0.75 )
+   {
+     cp = "very high";
+   }
+   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. You will be booked on "+airlineDetail.name+" with a carbon footprint of "+cp;   
+   }
+   });
+}
+
 airlineDetails.forEach(function (airlineDetail) {
   //chatResponse = airlineDetail.departingCity;
   if(req.body.queryResult.parameters.departCity == airlineDetail.departingCity && req.body.queryResult.parameters.arrivalCity == airlineDetail.arrivalCity)
@@ -40,7 +69,7 @@ airlineDetails.forEach(function (airlineDetail) {
      cp = "very high";
    }
     
-  chatResponse = chatResponse + "\n\r\t"+"                                                                                                           "+"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
+  chatResponse = chatResponse + "\n\r\t"+"Option :" +counter+" "+airlineDetail.name+ " which takes "+airlineDetail.runningHours+" hours and has "+airlineDetail.stops+" stops. The carbon footprint is \n\r\t"+cp+"." ;
   }
   
 });
