@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-var chatResponse = "Below is a list of details I could fetch.Spare some time and book wisely , I have used my intelligence and calucalted the carboon footprints for each of the options.";
+var chatResponse = "Below is a list of details I could fetch.Spare some time and book wisely , I have used my intelligence and calculated the carboon footprints for each of the options.";
 var counter = 0;  
 var airlineDetails = require('./airline.json');
 
@@ -41,7 +41,7 @@ if (action == 'book_confirmation')
    {
      cp = "very high";
    }
-   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. You will be booked on "+airlineDetail.name+" with a "+cp+" carbon footprint.";   
+   chatResponse = "There you go, I have initiated the approval process and send the mail to your lead for confirmation. When I get the approval, you will be booked on "+airlineDetail.name+" with a "+cp+" carbon footprint."+" Choosing a Business class will always burn twice the amount of carbon dioxide and other toxics compared to flying economy.";   
    }
    });
 }
